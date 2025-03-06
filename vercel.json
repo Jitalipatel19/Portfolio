@@ -1,12 +1,5 @@
 {
-  "rewrites": [
-   {
-      "source": "/files/(.*)",
-      "destination": "/files/:splat"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/"
-    }
-  ]
+   "rewrites":  [
+       {"source": "/(.*)", "destination": "/"}
+    ]
 }
