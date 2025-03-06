@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/docs/(.*\\.doc|.*\\.docx|.*\\.pdf)",
-      "destination": "/docs/:splat"
+      "source": "/docs/(.*\\.(doc|docx|pdf))$",
+      "destination": "/docs/:1"
     },
     {
       "source": "/(.*)",
