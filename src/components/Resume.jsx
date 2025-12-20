@@ -24,17 +24,18 @@ export const Resume = () => {
           <p className="text-xl font-semibold mb-6 text-gray-300">
             Download
           </p>
-          <a 
+  <a 
   href={RESUME.resume} 
   target="_blank" 
   rel="noopener noreferrer"
+  className="inline-block px-6 py-3 text-lg font-medium text-purple-400 border border-purple-400 rounded hover:bg-purple-400 hover:text-white transition-colors duration-300"
   onClick={(e) => {
-    if (!RESUME.resume) {
+    // If the path is just "/" or empty, stop the link from opening
+    if (RESUME.resume === "/" || !RESUME.resume) {
       e.preventDefault();
-      console.error("Resume link is missing!");
+      alert("Resume file not found. Please check the file path.");
     }
   }}
-  className="inline-block px-6 py-3 text-lg font-medium text-purple-400 border border-purple-400 rounded hover:bg-purple-400 hover:text-white transition-colors duration-300"
 >
   View Resume
 </a>
