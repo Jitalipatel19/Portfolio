@@ -25,14 +25,19 @@ export const Resume = () => {
             Download
           </p>
           <a 
-            href={RESUME.resume} 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="inline-block px-6 py-3 text-lg font-medium text-purple-400 border border-purple-400 rounded hover:bg-purple-400 hover:text-white transition-colors duration-300"
-          >
-          
-            View Resume
-          </a>
+  href={RESUME.resume} 
+  target="_blank" 
+  rel="noopener noreferrer"
+  onClick={(e) => {
+    if (!RESUME.resume) {
+      e.preventDefault();
+      console.error("Resume link is missing!");
+    }
+  }}
+  className="inline-block px-6 py-3 text-lg font-medium text-purple-400 border border-purple-400 rounded hover:bg-purple-400 hover:text-white transition-colors duration-300"
+>
+  View Resume
+</a>
         </motion.div>
       </div>
     </div>
