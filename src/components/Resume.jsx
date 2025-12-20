@@ -1,9 +1,11 @@
 import React from 'react';
 import { motion } from "framer-motion";
-// 1. IMPORT your resume file directly here
-import resumeFile from '../assets/certificate/resume.pdf'; 
 
 export const Resume = () => {
+  // We define the path here. 
+  // IMPORTANT: Ensure this relative path correctly points from this file to your PDF
+  const resumePath = require('../assets/certificate/resume.pdf');
+
   return (
     <div className="mx-auto max-w-4xl mb-20 border-b border-neutral-900 pb-10 text-white">
       <motion.h1 
@@ -23,12 +25,11 @@ export const Resume = () => {
           className="max-w-md p-6 border-2 border-purple-400 rounded-lg shadow-lg text-center"
         >
           <p className="text-xl font-semibold mb-6 text-gray-300">
-            Preview & Download
+            Professional Profile
           </p>
 
-          {/* 2. Change href to use the imported 'resumeFile' variable */}
           <a 
-            href={resumeFile} 
+            href={resumePath} 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-block px-6 py-3 text-lg font-medium text-purple-400 border border-purple-400 rounded hover:bg-purple-400 hover:text-white transition-colors duration-300"
