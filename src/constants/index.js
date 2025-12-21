@@ -2,7 +2,7 @@ import project1 from "../assets/projects/portfolio.png";
 import project2 from "../assets/projects/internify.png";
 import project3 from "../assets/projects/amazon.png";
 import project4 from "../assets/projects/llh.png";
-git add .
+
 
 // HERO CONTENT
 export const HERO_CONTENT = `
