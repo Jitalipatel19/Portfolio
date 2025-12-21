@@ -28,16 +28,20 @@ export const Resume = () => {
   href={RESUME.resume} 
   target="_blank" 
   rel="noopener noreferrer"
-  download="My_Resume.pdf" // This forces a download if viewing fails
   className="inline-block px-6 py-3 text-lg font-medium text-purple-400 border border-purple-400 rounded hover:bg-purple-400 hover:text-white transition-colors duration-300"
   onClick={(e) => {
-    if (!RESUME.resume || RESUME.resume === "/") {
+    // Check if path is valid
+    if (!RESUME.resume || RESUME.resume === "/" || RESUME.resume === "#") {
       e.preventDefault();
-      alert("Resume file not found in the public folder.");
+      alert("Resume file not found. Please ensure the file is in the public folder.");
+      return;
     }
+    
+    // Optional: Log the path to console to debug in Vercel (F12 inspect)
+    console.log("Opening resume from:", RESUME.resume);
   }}
 >
-  Download Resume
+  View Resume
 </a>
         </motion.div>
       </div>
