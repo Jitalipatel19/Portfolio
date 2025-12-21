@@ -2,8 +2,7 @@ import project1 from "../assets/projects/portfolio.png";
 import project2 from "../assets/projects/internify.png";
 import project3 from "../assets/projects/amazon.png";
 import project4 from "../assets/projects/llh.png";
-import resume from "./public/jitali.pdf";
-
+import resume from "../assets/resume/jitali"
 
 
 // HERO CONTENT
@@ -100,6 +99,6 @@ export const EDUCATION = {
   city4 : "Ahemedabad",
 }
 export const RESUME ={
-  resume :"./src/public/jitali.pdf"
+  resume :"./src/assets/resume/jitali.pdf"
 }
 
