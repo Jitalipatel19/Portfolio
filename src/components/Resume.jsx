@@ -24,17 +24,21 @@ export const Resume = () => {
           <p className="text-xl font-semibold mb-6 text-gray-300">
             Download
           </p>
-  <a 
+ <a 
   href={RESUME.resume} 
   target="_blank" 
   rel="noopener noreferrer"
   className="inline-block px-6 py-3 text-lg font-medium text-purple-400 border border-purple-400 rounded hover:bg-purple-400 hover:text-white transition-colors duration-300"
   onClick={(e) => {
-    // If the path is just "/" or empty, stop the link from opening
-    if (RESUME.resume === "/" || !RESUME.resume) {
+    // Check if path is valid
+    if (!RESUME.resume || RESUME.resume === "/" || RESUME.resume === "#") {
       e.preventDefault();
-      alert("Resume file not found. Please check the file path.");
+      alert("Resume file not found. Please ensure the file is in the public folder.");
+      return;
     }
+    
+    // Optional: Log the path to console to debug in Vercel (F12 inspect)
+    console.log("Opening resume from:", RESUME.resume);
   }}
 >
   View Resume
