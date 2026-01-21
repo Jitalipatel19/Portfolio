@@ -2,6 +2,7 @@ import { RiReactjsLine } from "react-icons/ri";
 import { MdHtml } from "react-icons/md";
 import { MdOutlineCss } from "react-icons/md";
 import { FaNodeJs } from "react-icons/fa";
+import { FcAndroidOs } from "react-icons/fc";
 import { FaPhp } from "react-icons/fa";
 import { SiMysql } from "react-icons/si";
 import { IoLogoPython } from "react-icons/io";
@@ -75,7 +76,17 @@ const Technologies = () => {
             <RiReactjsLine className="text-7xl text-cyan-500" />
           </div>
         </motion.div>
-
+         {/* android */}
+         <motion.div
+          variants={iconVariants(2.5)}
+          initial="initial"
+          animate="animate"
+          className="p-2 icon-border"
+        >
+          <div className="border-2 border-cyan-500 rounded-full p-2">
+            <FcAndroidOs  className="text-7xl text-cyan-500" />
+          </div>
+        </motion.div>
         {/* php */}
         <motion.div
           variants={iconVariants(2.5)}
