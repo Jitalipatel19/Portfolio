@@ -14,7 +14,7 @@ const iconVariants = (duration) => ({
     y: [10, -10],
     transition: {
       duration: duration,
-      ease: "linear",
+      ease: "easeInOut", // Smooth floating effect
       repeat: Infinity,
       repeatType: "reverse",
     },
@@ -24,102 +24,63 @@ const iconVariants = (duration) => ({
 const Technologies = () => {
   return (
     <div className="pb-24">
-      {/* HEADING */}
-      <h1 className="my-8 text-center text-2xl my-20 text-center text-4xl">Technologies</h1>
+      <h1 className="my-20 text-center text-4xl font-bold">Technologies</h1>
 
-      <div className="flex flex-wrap items-center justify-center">
+      <div className="flex flex-wrap items-center justify-center gap-6">
 
-        {/* HTML */}
-        <motion.div
-          variants={iconVariants(5)}
-          initial="initial"
-          animate="animate"
-          className="p-2 icon-border"
-        >
-          <div className="border-2 border-red-500 rounded-full p-2">
-            <MdHtml className="text-7xl text-red-500" />
+        {/* HTML - Official Orange */}
+        <motion.div variants={iconVariants(2.5)} initial="initial" animate="animate">
+          <div className="border-4 border-orange-600/80 rounded-2xl p-4">
+            <MdHtml className="text-7xl text-orange-600" />
           </div>
         </motion.div>
 
-        {/* CSS */}
-        <motion.div
-          variants={iconVariants(6)}
-          initial="initial"
-          animate="animate"
-          className="p-2 icon-border"
-        >
-          <div className="border-2 border-purple-500 rounded-full p-2">
-            <MdOutlineCss className="text-7xl text-purple-500" />
+        {/* CSS - Official Blue */}
+        <motion.div variants={iconVariants(3)} initial="initial" animate="animate">
+          <div className="border-4 border-blue-500/80 rounded-2xl p-4">
+            <MdOutlineCss className="text-7xl text-blue-500" />
           </div>
         </motion.div>
 
-        {/* JS (Node.js) */}
-        <motion.div
-          variants={iconVariants(6)}
-          initial="initial"
-          animate="animate"
-          className="p-2 icon-border"
-        >
-          <div className="border-2 border-green-500 rounded-full p-2">
+        {/* Node.js - Official Green */}
+        <motion.div variants={iconVariants(5)} initial="initial" animate="animate">
+          <div className="border-4 border-green-500/80 rounded-2xl p-4">
             <FaNodeJs className="text-7xl text-green-500" />
           </div>
         </motion.div>
 
-        {/* ReactJS */}
-        <motion.div
-          variants={iconVariants(2.5)}
-          initial="initial"
-          animate="animate"
-          className="p-2 icon-border"
-        >
-          <div className="border-2 border-cyan-500 rounded-full p-2">
-            <RiReactjsLine className="text-7xl text-cyan-500" />
-          </div>
-        </motion.div>
-         {/* android */}
-         <motion.div
-          variants={iconVariants(2.5)}
-          initial="initial"
-          animate="animate"
-          className="p-2 icon-border"
-        >
-          <div className="border-2 border-cyan-500 rounded-full p-2">
-            <FcAndroidOs  className="text-7xl text-cyan-500" />
-          </div>
-        </motion.div>
-        {/* php */}
-        <motion.div
-          variants={iconVariants(2.5)}
-          initial="initial"
-          animate="animate"
-          className="p-2 icon-border"
-        >
-         <div className="border-2 border-pink-500 rounded-full p-2">
-         <FaPhp className="text-7xl text-pink-500" />
+        {/* ReactJS - Official Cyan */}
+        <motion.div variants={iconVariants(2)} initial="initial" animate="animate">
+          <div className="border-4 border-cyan-400/80 rounded-2xl p-4">
+            <RiReactjsLine className="text-7xl text-cyan-400" />
           </div>
         </motion.div>
 
-        {/* MYSQL */}
-        <motion.div
-          variants={iconVariants(4)}
-          initial="initial"
-          animate="animate"
-          className="p-2 icon-border"
-        >
-          <div className="border-2 border-yellow-500 rounded-full p-2">
-            <SiMysql className="text-7xl text-yellow-500" />
+        {/* Android - Official Android Green */}
+        <motion.div variants={iconVariants(6)} initial="initial" animate="animate">
+          <div className="border-4 border-green-400/80 rounded-2xl p-4">
+            <FcAndroidOs className="text-7xl" />
           </div>
         </motion.div>
 
-        {/* PYTHON */}
-        <motion.div
-          variants={iconVariants(4.5)}
-          initial="initial"
-          animate="animate"
-          className="p-2 icon-border"
-        >
-          <div className="border-2 border-blue-500 rounded-full p-2">
-            <IoLogoPython className="text-7xl text-blue-500" />
+        {/* PHP - Official Indigo/Purple */}
+        <motion.div variants={iconVariants(4)} initial="initial" animate="animate">
+          <div className="border-4 border-indigo-400/80 rounded-2xl p-4">
+            <FaPhp className="text-7xl text-indigo-400" />
+          </div>
+        </motion.div>
+
+        {/* MYSQL - Official Sky Blue */}
+        <motion.div variants={iconVariants(2.5)} initial="initial" animate="animate">
+          <div className="border-4 border-sky-500/80 rounded-2xl p-4">
+            <SiMysql className="text-7xl text-sky-500" />
+          </div>
+        </motion.div>
+
+        {/* PYTHON - Official Yellow/Gold */}
+        <motion.div variants={iconVariants(3.5)} initial="initial" animate="animate">
+          <div className="border-4 border-yellow-400/80 rounded-2xl p-4">
+            <IoLogoPython className="text-7xl text-yellow-400" />
           </div>
         </motion.div>
 
